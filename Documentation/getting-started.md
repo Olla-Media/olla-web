@@ -48,6 +48,8 @@ npm run build
 
 If all three succeed, the project is in good shape to commit or deploy.
 
+This project is a **private** git repo. Adding a remote, pushing `staging` / `main`, and opening PRs is covered in [Contributing](contributing.md).
+
 ## Environment variables
 
 Optional (forms stay UI-only until set):

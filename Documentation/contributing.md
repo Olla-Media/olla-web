@@ -1,10 +1,67 @@
 # Contributing
 
-## Workflow
+This is a **private** repository. Do not fork it publicly, copy source into a public gist, or share clone URLs outside the team. Access is invite-only.
 
-1. Branch from `main` with a short, descriptive name (`fix/footer-year`, `feat/blog-index`).
-2. Update `Documentation/` when behavior or setup changes.
-3. Before opening a PR:
+## Branches
+
+| Branch | Role |
+| --- | --- |
+| `main` | Production-ready history |
+| `staging` | Integration branch for review and preview deploys |
+
+Day-to-day work happens on `staging` (or a short-lived feature branch merged into `staging`). Promote to `main` when a release is ready.
+
+The local repo was initialized without a remote. Add one when the private host exists:
+
+```bash
+git remote add origin git@github.com:<org-or-user>/<private-repo>.git
+# HTTPS alternative:
+# git remote add origin https://github.com/<org-or-user>/<private-repo>.git
+```
+
+Confirm:
+
+```bash
+git remote -v
+```
+
+## First push
+
+After the empty private repo exists on GitHub (or GitLab / Bitbucket):
+
+```bash
+git push -u origin main
+git push -u origin staging
+```
+
+`-u` sets upstream so later `git push` / `git pull` work without extra arguments.
+
+If the host created a README on the empty repo, pull with rebase first:
+
+```bash
+git pull origin main --rebase
+git push -u origin main
+git push -u origin staging
+```
+
+## Daily workflow
+
+1. Start from `staging` and keep it current:
+
+   ```bash
+   git checkout staging
+   git pull
+   ```
+
+2. For larger changes, branch from `staging`:
+
+   ```bash
+   git checkout -b feat/short-name
+   ```
+
+3. Update `Documentation/` when behavior or setup changes.
+
+4. Before you push:
 
    ```bash
    npm test
@@ -12,7 +69,23 @@
    npm run build
    ```
 
-4. Prefer small PRs. Match existing layout and brand tokens rather than inventing new visual systems.
+5. Commit, then push the branch you are on:
+
+   ```bash
+   git add -A
+   git commit -m "Describe why this change exists."
+   git push -u origin HEAD
+   ```
+
+6. Open a pull request **into `staging`** (private repo — only collaborators can see it). Merge to `main` from `staging` when you ship.
+
+Prefer small PRs. Match existing layout and brand tokens rather than inventing new visual systems. Do not force-push `main` or `staging`.
+
+## Access
+
+- Invite collaborators on the private repo; they clone with SSH or HTTPS after accepting.
+- Vercel (or any CI) needs permission to the **private** GitHub org/user so it can import the repo. See [Deployment](deployment.md).
+- Never commit `.env.local`, API keys, or tokens. `*.local` is already gitignored.
 
 ## Code conventions
 

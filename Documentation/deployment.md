@@ -6,15 +6,16 @@ The app is a static Vite SPA. Vercel handles builds, CDN, HTTPS, and preview URL
 
 ### Setup
 
-1. Push **this** repository to GitHub (or GitLab / Bitbucket).
-2. In [Vercel](https://vercel.com/new), **Import** the repo.
-3. Configure the project:
+1. Create a **private** repo on GitHub (or GitLab / Bitbucket). Do not make it public.
+2. Add the remote and push `main` and `staging` as in [Contributing](contributing.md).
+3. In [Vercel](https://vercel.com/new), **Import** the private repo (grant Vercel access to the private org/user if prompted).
+4. Configure the project:
    - **Root Directory:** leave default (`.`) — this repo *is* the app
    - **Framework Preset:** Vite
    - **Build Command:** `npm run build`
    - **Output Directory:** `dist`
    - **Install Command:** `npm install`
-4. Deploy. Production branch is typically `main`.
+5. Deploy. Production branch is typically `main`. Use `staging` for preview / integration if you add a second Vercel environment.
 
 `vercel.json` already rewrites all paths to `index.html` so client-side routes (`/about`, `/faqs`, …) work on refresh.
 

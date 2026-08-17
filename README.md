@@ -55,7 +55,7 @@ Open the URL Vite prints (usually `http://localhost:5173`).
 | [Deployment](Documentation/deployment.md) | Vercel (primary) and DigitalOcean notes |
 | [Testing](Documentation/testing.md) | How tests are organized and how to run them |
 | [API Integration](Documentation/api-integration.md) | Wiring contact & newsletter forms later |
-| [Contributing](Documentation/contributing.md) | Conventions for changes and PRs |
+| [Contributing](Documentation/contributing.md) | Private repo, `staging` / `main`, push, PRs |
 
 ## Stack
 
