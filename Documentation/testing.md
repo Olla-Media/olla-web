@@ -31,6 +31,7 @@ npm run test:watch    # watch mode while developing
 | Contact form | `src/components/contact/ContactForm.test.tsx` | Fields + subject validation |
 | FAQs | `src/pages/FaqsPage.test.tsx` | List, search filter, empty state |
 | Pages / routing | `src/App.test.tsx` | Home, About, Jobs, Press, Contact + unknown → `/` |
+| SEO | `src/data/seo.test.ts`, `src/components/seo/Seo.test.tsx` | Route metadata + document title / canonical |
 
 ## Writing a new test
 

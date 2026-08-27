@@ -21,11 +21,13 @@ The app is a static Vite SPA. Vercel handles builds, CDN, HTTPS, and preview URL
 
 ### Environment variables
 
-In the Vercel project → **Settings → Environment Variables**:
+Copy `example.env` to `.env` locally. In Vercel → **Settings → Environment Variables**, set the same keys for Production / Preview.
 
 | Name | Example | When |
 | --- | --- | --- |
 | `VITE_API_BASE_URL` | `https://api.olla.media` | After the backend exists |
+| `VITE_SITE_URL` | `https://olla.media` | Canonical URLs and Open Graph (required for production SEO) |
+| `VITE_GOOGLE_SITE_VERIFICATION` | token from Search Console | HTML-tag site verification |
 
 Redeploy after changing env vars so Vite can inline them at build time.
 

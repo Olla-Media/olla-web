@@ -1,4 +1,5 @@
-import joel from '@/assets/team/joel.png'
+import atong from '@/assets/team/james.jpeg'
+import joel from '@/assets/team/joel.jpeg'
 
 export type TeamMember = {
   name: string
@@ -23,6 +24,7 @@ export const team: TeamMember[] = [
     name: 'Atong’ James',
     role: 'CTO and Co-founder',
     bio: 'Atong’ architects Olla’s Android experience — from instant delivery to HepaSnap’s timed media — so chats stay fast, private, and reliable.',
+    image: atong,
     initials: 'AJ',
   },
   {

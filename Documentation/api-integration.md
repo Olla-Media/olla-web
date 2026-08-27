@@ -4,7 +4,7 @@ Forms on the site are **UI-complete** today. Wiring a real backend is optional a
 
 ## Toggle
 
-Set in `.env.local` (local) or Vercel project settings (deployed):
+Set in `.env` (local) or Vercel project settings (deployed). Start from `example.env`.
 
 ```
 VITE_API_BASE_URL=https://api.example.com

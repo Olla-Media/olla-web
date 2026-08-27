@@ -55,6 +55,7 @@ Open the URL Vite prints (usually `http://localhost:5173`).
 | [Deployment](Documentation/deployment.md) | Vercel (primary) and DigitalOcean notes |
 | [Testing](Documentation/testing.md) | How tests are organized and how to run them |
 | [API Integration](Documentation/api-integration.md) | Wiring contact & newsletter forms later |
+| [SEO](Documentation/seo.md) | Google indexing, sitemap, Search Console |
 | [Contributing](Documentation/contributing.md) | Private repo, `staging` / `main`, push, PRs |
 
 ## Stack
@@ -70,7 +71,7 @@ Primary target is **Vercel**. Import this repo as-is (no special Root Directory)
 
 ## Forms
 
-Stubs in `src/lib/api.ts`. Optional env:
+Stubs in `src/lib/api.ts`. Copy `example.env` to `.env` (gitignored) and set:
 
 ```
 VITE_API_BASE_URL=https://api.example.com

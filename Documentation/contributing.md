@@ -85,7 +85,7 @@ Prefer small PRs. Match existing layout and brand tokens rather than inventing n
 
 - Invite collaborators on the private repo; they clone with SSH or HTTPS after accepting.
 - Vercel (or any CI) needs permission to the **private** GitHub org/user so it can import the repo. See [Deployment](deployment.md).
-- Never commit `.env.local`, API keys, or tokens. `*.local` is already gitignored.
+- Never commit `.env`, API keys, or tokens. Copy `example.env` to `.env` locally. `.env` and `.env.*` are gitignored; only `example.env` is tracked.
 
 ## Code conventions
 

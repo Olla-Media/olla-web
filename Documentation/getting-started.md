@@ -57,14 +57,24 @@ Optional (forms stay UI-only until set):
 | Variable | Used for |
 | --- | --- |
 | `VITE_API_BASE_URL` | Base URL for `POST /contact` and `POST /newsletter` |
+| `VITE_SITE_URL` | Canonical site origin (default `https://olla.media`) |
+| `VITE_GOOGLE_SITE_VERIFICATION` | Google Search Console verification token |
 
-Create `.env.local` for local overrides (do not commit secrets):
+Create `.env` from the template (do not commit `.env`):
 
 ```
-VITE_API_BASE_URL=https://api.example.com
+cp example.env .env
 ```
 
-See [API Integration](api-integration.md) for request shapes.
+| Variable | Used for |
+| --- | --- |
+| `VITE_API_BASE_URL` | Base URL for `POST /contact` and `POST /newsletter` |
+| `VITE_SITE_URL` | Canonical site origin (default `https://olla.media`) |
+| `VITE_GOOGLE_SITE_VERIFICATION` | Google Search Console verification token |
+
+`.env` and `.env.*` are gitignored. `example.env` is the committed template.
+
+See [API Integration](api-integration.md) for request shapes and [SEO](seo.md) for indexing.
 
 ## Next steps
 

@@ -30,8 +30,9 @@ Browser
 │   │   ├── home/           # Hero, FeatureCarousel, Newsletter
 │   │   ├── layout/         # Navbar, Footer, Layout / AboutShell
 │   │   ├── press/          # DateBadge, ArchiveItem
+│   │   ├── seo/            # Per-route title, canonical, JSON-LD
 │   │   └── ui/             # shadcn primitives + brand Logo / Play badge
-│   ├── data/               # Static copy (features, FAQs, jobs, press, team)
+│   ├── data/               # Static copy (features, FAQs, jobs, press, team, seo)
 │   ├── lib/                # api stubs, cn() helper
 │   ├── pages/              # Route-level screens
 │   ├── test/               # Vitest setup + render helpers
@@ -83,4 +84,4 @@ npx shadcn@latest add <component>
   - Without `VITE_API_BASE_URL`: no-op success (UI-only)
   - With the env var: `fetch` to `/contact` and `/newsletter`
 
-Runtime images live under `src/assets/`.
+- **SEO** — `src/data/seo.ts` + `Seo` in the layout set title, description, canonical, Open Graph, and JSON-LD. `public/robots.txt` and `public/sitemap.xml` are served as static files. See [SEO](seo.md).

@@ -6,6 +6,7 @@ import { aboutLinks } from '@/data/site'
 import { cn } from '@/lib/utils'
 import { Footer } from './Footer'
 import { Navbar } from './Navbar'
+import { Seo } from '@/components/seo/Seo'
 
 export function Layout() {
   const { pathname } = useLocation()
@@ -16,6 +17,7 @@ export function Layout() {
 
   return (
     <div className="flex min-h-svh flex-col">
+      <Seo />
       <Navbar />
       <main className="flex-1">
         <Outlet />
