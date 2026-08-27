@@ -1,5 +1,24 @@
 # Deployment
 
+## GitHub Pages
+
+Hosted from the `feature/githubpages` branch via GitHub Actions.
+
+- **URL:** https://olla-media.github.io/olla-web/
+- **Workflow:** `.github/workflows/deploy-pages.yml` (builds with `VITE_BASE_PATH=/olla-web/` and deploys `dist`)
+- **SPA fallback:** `404.html` is a copy of `index.html` so client routes work on refresh
+
+Enable once in the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+Push to `feature/githubpages` (or run the workflow manually) to publish.
+
+Local check:
+
+```bash
+npm run build:gh-pages
+npx vite preview --base /olla-web/
+```
+
 ## Vercel (recommended)
 
 The app is a static Vite SPA. Vercel handles builds, CDN, HTTPS, and preview URLs for pull requests.
